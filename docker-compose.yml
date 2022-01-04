@@ -1,7 +1,11 @@
 version: '3.5'
 services:
   app:
-    image: ubuntu:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    tty: true
     restart: always
-    volumes:
-      - ssh/:~/.ssh
+    container_name: appcontainer
+#    volumes:
+#      - ssh/:~/.ssh
