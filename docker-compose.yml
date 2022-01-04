@@ -4,8 +4,9 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    container_name: appcontainer
     tty: true
     restart: always
-    container_name: appcontainer
     volumes:
       - ./ssh:/home/user/.ssh
+#    command: chmod -R 700 /home/user/.ssh

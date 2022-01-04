@@ -1,7 +1,11 @@
 FROM ubuntu:latest
 
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y \
     git \
+    sudo \
+    rsync \
+    zsh \
+    vim \
  && apt-get clean \
  && rm -rf /var/lib/apt/list
 
