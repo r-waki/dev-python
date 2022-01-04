@@ -7,5 +7,5 @@ services:
     tty: true
     restart: always
     container_name: appcontainer
-#    volumes:
-#      - ssh/:~/.ssh
+    volumes:
+      - ./ssh:/home/user/.ssh
