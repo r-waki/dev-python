@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+  app:
+    image: ubuntu:latest
+    restart: always
+    volumes:
+      - ssh/:~/.ssh
