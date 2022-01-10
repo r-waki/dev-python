@@ -7,8 +7,12 @@ RUN apt-get update && apt-get install -y \
     zsh \
     vim \
     curl \
+    unzip \
+    pip \
  && apt-get clean \
  && rm -rf /var/lib/apt/list
+
+RUN pip install flake8 selenium pytest
 
 ARG USERNAME=user
 ARG GROUPNAME=user
