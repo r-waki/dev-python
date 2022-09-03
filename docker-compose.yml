@@ -4,9 +4,10 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: appcontainer
+    container_name: app-python-container
     tty: true
     restart: always
     volumes:
       - ./ssh:/home/user/.ssh
+      - ./work:/home/user/work
 #    command: chmod -R 700 /home/user/.ssh

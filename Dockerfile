@@ -12,7 +12,11 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/list
 
-RUN pip install flake8 selenium pytest
+RUN pip install flake8 \
+                selenium \
+                pytest \
+                numpy \
+                pandas
 
 ARG USERNAME=user
 ARG GROUPNAME=user
